@@ -86,8 +86,9 @@
       .context {
         width: 100%;
         padding:80px 40px;
-        margin: 0 auto;     /* center on mobile */
+        margin: 0 auto 20px;     /* center on mobile */
         height: 50%;
+        background: linear-gradient(180deg, #8d2de28a, #8d2de200);
       }
         .invisible {
             display: none;
@@ -201,6 +202,7 @@
     @media (max-width: 600px) {
       .card { flex-direction: column; }
       .card-image, .card-content { padding: 1.5rem; }
+      .made-by { margin-bottom: 40px }
     }
 
     /* FOOTER */
@@ -214,7 +216,7 @@
     }
     .social-icons a { margin: 1rem 0.5rem; color: #fff; font-size: 1.2rem; }
     .social-icons a:hover { opacity: 0.8; }
-    .made-by { margin-top: 0.5rem; }
+    .made-by { margin-top: 0.5rem; margin-bottom: 40px }
   </style>
 </head>
 <body>
