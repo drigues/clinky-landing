@@ -3,30 +3,37 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <!-- Favicon -->
+
+  <!-- FAVICONS -->
   <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="assets/favicon.png" sizes="16x16" />
   <link rel="apple-touch-icon" href="assets/favicon.png" sizes="180x180" />
   <link rel="manifest" href="site.webmanifest" />
 
-  <!-- SEO Meta Tags -->
+  <!-- SEO META -->
   <meta name="description" content="Clinky – A Link-in-Bio tool to help you share your links, grow your sales, and engage your audience. Sign up to be the first to know when we launch!" />
   <meta name="keywords" content="Clinky, link in bio, social links, newsletter, launch" />
   <meta name="author" content="Clinky, Inc." />
 
-  <!-- Open Graph / Social -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Clinky – Coming Soon" />
   <meta property="og:description" content="Be the first to know when Clinky launches. Share your links, grow your sales, and engage your audience!" />
   <meta property="og:image" content="https://clinky.cc/assets/bg.jpg" />
   <meta property="og:url" content="https://clinky.cc" />
   <meta property="og:type" content="website" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:wght@200..700&display=swap" rel="stylesheet">
-  <title>Clinky – Coming Soon</title>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clinky – Coming Soon" />
+  <meta name="twitter:description" content="Share your links, grow your sales, and engage your audience. Sign up now!" />
+  <meta name="twitter:image" content="https://clinky.cc/assets/bg.jpg" />
 
-  <!-- Font Awesome for icons -->
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:wght@200..700&family=Montserrat:wght@100..900&family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -35,56 +42,83 @@
     referrerpolicy="no-referrer"
   />
 
+  <title>Clinky – Coming Soon</title>
+
   <style>
-    /* --- page reset & layout --- */
+    /* RESET & BASE */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
     body {
-      font-family: sans-serif;
-      color: #fff;
+      font-family: 'Montserrat', sans-serif;
       background: url('assets/bg.jpg') no-repeat center/cover fixed;
+      color: #fff;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
     }
+
+    /* CONTEXT BOX */
+    .cont1 {
+      width: 50%;
+        display: block;
+        padding: 40px;
+        text-align: center;
+    }
+    .context {
+      width: 50%;
+        margin-left: 0;
+        margin-right: auto;
+        padding: 40px;
+        text-align: center;
+    }
+    @media (max-width: 600px) {
+      .context {
+        width: 100%;
+        padding: 20px;
+        margin: 0 auto;     /* center on mobile */
+      }
+    }
+
+    /* LOGO */
     img.logo {
       max-width: 300px;
-      margin: 2rem auto 1rem;
+      margin: 0 auto 1rem;
+      display: block;
     }
-    h1, h2 {
-      text-align: center;
+
+    /* STATIC HEADLINES */
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
       text-shadow: 0 1px 2px rgba(0,0,0,0.6);
     }
-    h1 { font-size: 3rem; margin-bottom: 0.5rem; max-width: 600px; margin: auto; }
-    h2 { font-size: 1.25rem; margin-bottom: 2rem; font-weight: 300; }
-
-
-    .cascadia {
-    font-family: "Cascadia Mono", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      font-weight: 300;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
     }
-    /* --- center the signup card --- */
+
+
+    /* CENTERED CARD */
     main {
       flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
+      padding: 2rem 0;
     }
 
-    /* --- the card itself --- */
     .card {
       display: flex;
       background: #fff;
       color: #111;
       border-radius: 12px;
-      overflow: hidden;
       max-width: 800px;
       width: 100%;
+      overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .card .card-image {
+    .card-image {
       flex: 1;
       background: linear-gradient(45deg, #8E2DE2, #4A00E0);
       display: flex;
@@ -92,29 +126,27 @@
       justify-content: center;
       padding: 2rem;
     }
-    .card .card-image i {
+    .card-image i {
       font-size: 4rem;
       color: #fff;
     }
-    .card .card-content {
+    .card-content {
       flex: 2;
       padding: 2rem;
     }
-    .card .card-content h3 {
+    .card-content h3 {
       margin-bottom: 0.5rem;
       font-size: 1.5rem;
     }
-    .card .card-content p {
+    .card-content p {
       margin-bottom: 1.5rem;
       color: #555;
     }
 
-    /* --- form inside the card --- */
-    .card .card-content form {
-      display: flex;
-      flex-direction: column;
-    }
-    .card input[type="email"] {
+    /* FORM STYLES */
+    .card-content form { display: flex; flex-direction: column; }
+    .card-content input[type="email"],
+    .card-content input[type="text"] {
       padding: 0.75rem 1rem;
       font-size: 1rem;
       border: 1px solid #ccc;
@@ -122,8 +154,8 @@
       margin-bottom: 1rem;
       width: 100%;
     }
-    .card button {
-      padding: 1.5rem;
+    #mc-embedded-subscribe {
+      padding: 0.75rem 1rem;
       font-size: 1rem;
       border: none;
       border-radius: 50px;
@@ -133,84 +165,68 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
-    .card button:hover {
-      opacity: 0.9;
-    }
+    #mc-embedded-subscribe:hover { opacity: 0.9; }
 
-    /* --- responsive stack on small screens --- */
     @media (max-width: 600px) {
-      .card {
-        flex-direction: column;
-      }
-      .card .card-image {
-        padding: 1.5rem;
-      }
-      .card .card-content {
-        padding: 1.5rem;
-      }
+      .card { flex-direction: column; }
+      .card-image, .card-content { padding: 1.5rem; }
     }
 
-    /* --- footer --- */
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-      color: #fff;
-    }
-    .social-icons a {
-      margin: 0 0.5rem;
-      color: #fff;
-      font-size: 1.2rem;
-      text-decoration: none;
-    }
+    /* FOOTER */
+    footer { text-align: center; padding: 1rem 0; color: #fff; }
+    .social-icons a { margin: 0 0.5rem; color: #fff; font-size: 1.2rem; }
     .social-icons a:hover { opacity: 0.8; }
     .made-by { margin-top: 0.5rem; }
   </style>
 </head>
 <body>
-  <!-- logo + heading -->
-  <img src="assets/clinky.svg" alt="Clinky Logo" class="logo"/>
-  <h1 class="cascadia">Be the first ones to know the launch and domain.</h1>
-  <h2>A Link-in-Bio made for you!</h2>
+    <div class="cont1"></div>
+  <div class="context">
+    <!-- Logo -->
+    <img src="assets/clinky.svg" alt="Clinky Logo" class="logo"/>
 
-  <!-- centered signup card -->
-  <main>
-    <div class="card">
-      <div class="card-image">
-        <!-- swap this icon for an illustration if you have one -->
-        <i class="fas fa-envelope"></i>
-      </div>
-      <div class="card-content">
-        <h3>Sign up for our newsletter</h3>
-        <p>You will receive early-bird date exclusive launch to guarantee your /url before anyone else!</p>
-        <form
-          action="https://YOUR-DATACENTER.api.mailchimp.com/subscribe/post?u=YOUR_U&amp;id=YOUR_ID"
-          method="post"
-          target="_blank"
-          novalidate
-        >
-          <input
-            type="email"
-            name="EMAIL"
-            placeholder="Your email address"
-            required
-          />
-          <button type="submit">OK SIGN UP!</button>
-        </form>
-      </div>
-    </div>
-  </main>
+    <!-- Static headings -->
+    <h1>A Link-in-Bio made for you</h1>
+    <h2>Be one of the early-birds and garantee your url!</h2>
 
-  <!-- footer -->
-  <footer>
-    <div class="social-icons">
-      <a href="https://facebook.com/YOUR_PAGE" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com/YOUR_PAGE" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com/in/YOUR_PAGE" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    </div>
-    <div class="made-by">
-      Clinky © 2025 – Made with <i class="fas fa-heart"></i> for you!
-    </div>
-  </footer>
+    <!-- Signup card -->
+    <main>
+      <div class="card">
+        <div class="card-image">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="card-content">
+          <h3>Get to know!</h3>
+          <p>Sign up now for our newsletter.</p>
+
+          <!-- Mailchimp embed -->
+          <div id="mc_embed_signup">
+            <form action="https://clinky.us6.list-manage.com/subscribe/post?u=dafbfb6c3e6fb5f9994ce2375&amp;id=2d11ead9f9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <input type="text" name="FNAME" class="text" id="mce-FNAME" placeholder="Name">
+                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address" required>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_dafbfb6c3e6fb5f9994ce2375_2d11ead9f9" tabindex="-1" value="">
+                </div>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="social-icons">
+        <a href="https://facebook.com/YOUR_PAGE" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/YOUR_PAGE" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/YOUR_PAGE" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div class="made-by">Clinky © 2025 – Made with <i class="fas fa-heart"></i> for you!</div>
+    </footer>
+  </div>
+
 </body>
 </html>
