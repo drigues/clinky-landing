@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTX7Q6K11W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  <!-- FAVICONS -->
-  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="16x16" />
-  <link rel="apple-touch-icon" href="assets/favicon.png" sizes="180x180" />
-  <link rel="manifest" href="site.webmanifest" />
+        gtag('config', 'G-ZTX7Q6K11W');
+    </script>
 
-  <!-- SEO META -->
-  <meta name="description" content="Clinky – A Link-in-Bio tool to help you share your links, grow your sales, and engage your audience. Sign up to be the first to know when we launch!" />
-  <meta name="keywords" content="Clinky, link in bio, social links, newsletter, launch" />
-  <meta name="author" content="Clinky, Inc." />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Clinky – Coming Soon" />
-  <meta property="og:description" content="Be the first to know when Clinky launches. Share your links, grow your sales, and engage your audience!" />
-  <meta property="og:image" content="https://clinky.cc/assets/bg.jpg" />
-  <meta property="og:url" content="https://clinky.cc" />
-  <meta property="og:type" content="website" />
+    <!-- FAVICONS -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" sizes="180x180" />
+    <link rel="manifest" href="site.webmanifest" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Clinky – Coming Soon" />
-  <meta name="twitter:description" content="Share your links, grow your sales, and engage your audience. Sign up now!" />
-  <meta name="twitter:image" content="https://clinky.cc/assets/bg.jpg" />
+    <!-- SEO META -->
+    <meta name="description" content="Clinky - A Link-in-Bio tool to help you share your links, grow your sales, and engage your audience. Sign up to be the first to know when we launch!" />
+    <meta name="keywords" content="Clinky, link in bio, social links, newsletter, launch" />
+    <meta name="author" content="Thr33, Inc." />
 
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:wght@200..700&family=Montserrat:wght@100..900&family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Clinky - Link-in-Bio" />
+    <meta property="og:description" content="Be the first to know when Clinky launches. Share your links, grow your sales, and engage your audience!" />
+    <meta property="og:image" content="https://clinky.cc/assets/bg.jpg" />
+    <meta property="og:url" content="https://clinky.cc" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clinky" />
+   
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Clinky - Link-in-Bio" />
+    <meta name="twitter:description" content="Share your links, grow your sales, and engage your audience. Sign up now!" />
+    <meta name="twitter:image" content="https://clinky.cc/assets/bg.jpg" />
 
-  <!-- FONT AWESOME -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-..."
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:wght@200..700&family=Montserrat:wght@100..900&family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
 
-  <title>Clinky – Coming Soon</title>
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-..."
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <title>Clinky Link-in-Bio - Coming Soon</title>
 
   <style>
     /* RESET & BASE */
@@ -57,45 +68,58 @@
     }
 
     /* CONTEXT BOX */
-    .cont1 {
-      width: 50%;
+    .invisible {
+        width: 50%;
         display: block;
-        padding: 40px;
-        text-align: center;
     }
     .context {
-      width: 50%;
+        width: 50%;
         margin-left: 0;
         margin-right: auto;
-        padding: 40px;
+        padding: 80px;
         text-align: center;
+        background: #892ae294;
     }
+
     @media (max-width: 600px) {
       .context {
         width: 100%;
         padding: 20px;
         margin: 0 auto;     /* center on mobile */
       }
+        .invisible {
+            display: none;
+        }
     }
 
     /* LOGO */
     img.logo {
-      max-width: 300px;
-      margin: 0 auto 1rem;
-      display: block;
+        max-width: 220px;
+        margin: 0 auto 1rem;
+        display: block;
+        /* force SVG to white */
+        filter: brightness(0) invert(1)
+            /* add a subtle shadow: x-offset y-offset blur color */
+            drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+    }
+
+    .logo svg path {
+        fill: #fff;
     }
 
     /* STATIC HEADLINES */
     h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+        font-size: 2.2rem;
+        margin: 2rem 0 1rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        font-weight: 700;
     }
     h2 {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      font-weight: 300;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      font-weight: 500;
+      padding: 0 1.5rem;
     }
 
 
@@ -112,11 +136,11 @@
       display: flex;
       background: #fff;
       color: #111;
-      border-radius: 12px;
+      border-radius: 20px;
       max-width: 800px;
       width: 100%;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     .card-image {
       flex: 1;
@@ -135,12 +159,16 @@
       padding: 2rem;
     }
     .card-content h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        text-align: left;
+        font-weight: 600;
     }
     .card-content p {
       margin-bottom: 1.5rem;
       color: #555;
+      font-weight: 500;
+      text-align: left;
     }
 
     /* FORM STYLES */
@@ -155,7 +183,7 @@
       width: 100%;
     }
     #mc-embedded-subscribe {
-      padding: 0.75rem 1rem;
+      padding: 1rem 2rem;
       font-size: 1rem;
       border: none;
       border-radius: 50px;
@@ -164,6 +192,7 @@
       color: #fff;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      margin-top: .5rem;
     }
     #mc-embedded-subscribe:hover { opacity: 0.9; }
 
@@ -174,20 +203,27 @@
 
     /* FOOTER */
     footer { text-align: center; padding: 1rem 0; color: #fff; }
-    .social-icons a { margin: 0 0.5rem; color: #fff; font-size: 1.2rem; }
+    .social-icons {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .social-icons a { margin: 1rem 0.5rem; color: #fff; font-size: 1.2rem; }
     .social-icons a:hover { opacity: 0.8; }
     .made-by { margin-top: 0.5rem; }
   </style>
 </head>
 <body>
-    <div class="cont1"></div>
+  <div class="invisible"></div>
   <div class="context">
     <!-- Logo -->
     <img src="assets/clinky.svg" alt="Clinky Logo" class="logo"/>
 
     <!-- Static headings -->
     <h1>A Link-in-Bio made for you</h1>
-    <h2>Be one of the early-birds and garantee your url!</h2>
+    <h2>We are launching soon and you can be one of the early birds and guarantee your URL!</h2>
 
     <!-- Signup card -->
     <main>
@@ -197,7 +233,7 @@
         </div>
         <div class="card-content">
           <h3>Get to know!</h3>
-          <p>Sign up now for our newsletter.</p>
+          <p>Sign up now for our newsletter</p>
 
           <!-- Mailchimp embed -->
           <div id="mc_embed_signup">
@@ -220,11 +256,12 @@
     <!-- Footer -->
     <footer>
       <div class="social-icons">
-        <a href="https://facebook.com/YOUR_PAGE" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com/YOUR_PAGE" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/in/YOUR_PAGE" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <p>Follow us</p>
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/showcase/clinkycc" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
-      <div class="made-by">Clinky © 2025 – Made with <i class="fas fa-heart"></i> for you!</div>
+      <div class="made-by">Clinky © 2025 - Made with <i class="fas fa-heart"></i> for you!</div>
     </footer>
   </div>
 
